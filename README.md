@@ -1,4 +1,4 @@
-# Projeto de Automação de Relatórios com Python e SQL
+# Projeto de Automação de Relatórios
 
 ## Objetivo
 Automatizar o processo de atualização de dados no banco, gerar relatórios em CSV e PDF, e enviá-los automaticamente por e-mail para os destinatários definidos.
@@ -53,9 +53,9 @@ Este projeto resolve esse problema integrando todas as etapas em um fluxo automa
 ### Configurar Variáveis de Ambiente
 Criar uma arquivo .env com:
 
-`EMAIL_USER=seu_email
-EMAIL_PASSWORD=sua_senha
-SMTP_SERVER=smtp.seuprovedor.com
+`EMAIL_USER=seu_email  
+EMAIL_PASSWORD=sua senha  
+SMTP_SERVER=smtp.seuprovedor.com  
 SMTP_PORT=587`
 
 ### Execução de arquivo .bak (restauração de backup)
