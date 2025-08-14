@@ -67,6 +67,38 @@ Apesar de ser funcional, é uma abordagem mais manual e menos portátil.
 - Registro histórico do processo original
 - Útil para reprocessamentos ou ambientes controlados
 
+Segue uma versão adaptável:
+`
+@echo off
+REM =======================================================
+REM Script para executar a automação do projeto
+REM Adapte os caminhos abaixo conforme seu computador
+REM =======================================================
+
+REM ===== 1 - Caminho para ativar o ambiente virtual =====
+call "CAMINHO_COMPLETO\venv\Scripts\activate"
+
+REM ===== 2 - Ir para a pasta raiz do projeto =====
+cd /d "CAMINHO_COMPLETO_DO_PROJETO"
+
+REM ===== 3 - Executar scripts na ordem =====
+python update_database.py
+python analise_gera_csv.py
+python gera_relatorio_pdf.py
+python send_report.py
+
+REM ===== 4 - Desativar ambiente virtual =====
+deactivate
+
+REM ===== 5 - Mensagem final =====
+echo.
+echo ===============================================
+echo Relatório gerado e enviado com sucesso!
+echo ===============================================
+pause
+
+`
+
 **Atenção:** Este método será **substituído por um processo mais moderno**, orquestrado via **Apache Airflow**, com integração a fontes de dados automatizadas e controle de versionamento.
 
 **Nova abordagem:** A DAG do Airflow será responsável por:
