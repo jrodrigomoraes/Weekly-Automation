@@ -53,10 +53,10 @@ Este projeto resolve esse problema integrando todas as etapas em um fluxo automa
 ### Configurar Variáveis de Ambiente
 Criar uma arquivo .env com:
 
-`EMAIL_USER=seu_email  
+```EMAIL_USER=seu_email  
 EMAIL_PASSWORD=sua senha  
 SMTP_SERVER=smtp.seuprovedor.com  
-SMTP_PORT=587`
+SMTP_PORT=587```
 
 ### Execução de arquivo .bak (restauração de backup)
 
@@ -68,7 +68,7 @@ Apesar de ser funcional, é uma abordagem mais manual e menos portátil.
 - Útil para reprocessamentos ou ambientes controlados
 
 Segue uma versão adaptável:
-`
+```
 @echo off
 REM =======================================================
 REM Script para executar a automação do projeto
@@ -97,7 +97,7 @@ echo Relatório gerado e enviado com sucesso!
 echo ===============================================
 pause
 
-`
+```
 
 **Atenção:** Este método será **substituído por um processo mais moderno**, orquestrado via **Apache Airflow**, com integração a fontes de dados automatizadas e controle de versionamento.
 
