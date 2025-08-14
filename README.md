@@ -53,10 +53,12 @@ Este projeto resolve esse problema integrando todas as etapas em um fluxo automa
 ### Configurar Variáveis de Ambiente
 Criar uma arquivo .env com:
 
-```EMAIL_USER=seu_email  
+```
+EMAIL_USER=seu_email  
 EMAIL_PASSWORD=sua senha  
 SMTP_SERVER=smtp.seuprovedor.com  
-SMTP_PORT=587```
+SMTP_PORT=587
+```
 
 ### Execução de arquivo .bak (restauração de backup)
 
