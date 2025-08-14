@@ -1,0 +1,6 @@
+psycopg2
+pandas
+seaborn
+matplotlib
+python-dotenv
+reportlab
