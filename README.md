@@ -42,6 +42,32 @@ Este projeto resolve esse problema integrando todas as etapas em um fluxo automa
   - Dashboard de execuções com histórico de sucesso/falha (via Airflow UI ou logs exportados)
   - Registro de execuções em arquivos CSV ou base simples para controle e auditoria
 
+## Melhorias já concluídas (Parte 1)
+Como comentado acima, já comecei as melhorias e segue o que já foi feito!
+
+- **Limpeza e transformação de dados**
+  - Padronização de colunas, tratamento de nulos, normalização de strings e tipos.
+- **Validação com Great Expectations**
+  - Regras para garantir integridade dos dados antes de exportação.
+- **Logging estruturado**
+  - Uso do módulo `logging` para registrar início, fim, erros e métricas em cada etapa.
+- **Pipeline ETL modular**
+  - Scripts separados em `extract.py`, `transform.py`, `validate.py`, `load.py` e orquestrados por `main.py`.
+
+## Próximos Passos (redundância do menu de melhorias - sorry)
+### Roadmap
+
+### Integração e Automação
+- Carregamento final no banco de dados (PostgreSQL).
+- Configuração de ambiente Docker.
+- Automação do agendamento (Airflow / Cron).
+
+### Distribuição e Monitoramento
+- Geração dos relatórios PDF com gráficos.
+- Envio automático de e-mails.
+- Monitoramento ativo (falhas e execuções).
+- Armazenamento em nuvem (ex: Amazon S3).
+
 ---
 
 ## Configuração
@@ -118,8 +144,10 @@ pause
 - PostgreSQL / SQL Server – Banco de dados
 - dotenv – Variáveis de ambiente
 - Windows BAT Script – Automação
+- **Great Expectations** – Validação e garantia de qualidade dos dados (adicionada)
+- **Logging (módulo padrão)** – Monitoramento e registro das etapas  (adicionada)
 
-- **Essa stack será atualizada!**
+- **Essa stack será atualizada!** os que estão em destaque, foram as que fui adicionando conforme aumentei a complexidade do projeto. Além disso, o requirements também está sendo atualizado.
 
 ## License
 

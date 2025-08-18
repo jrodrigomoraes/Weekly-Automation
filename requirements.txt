@@ -4,3 +4,5 @@ seaborn
 matplotlib
 python-dotenv
 reportlab
+great-expectations
+requests
