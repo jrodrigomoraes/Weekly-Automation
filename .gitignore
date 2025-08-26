@@ -11,3 +11,12 @@ venv/
 
 # Scripts BAT (Windows)
 *.bat
+
+# Ignorar logs do Airflow
+project_evolution_part2/logs/
+
+# Ignorar __pycache__ em qualquer lugar
+**/__pycache__/
+
+# Ignorar arquivo de teste
+project_evolution_part2/dags/testando_ambiente.py
