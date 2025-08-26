@@ -1,0 +1,4 @@
+Preciso corrigir algumas coisas nesse pipeline.
+- Forma de inserir dados na segunda parte está errada. Os dados são limpos e persistidos, perdendo históricos de vendas mal formatadas.
+- A extração deve ser separada em duas etapas, dados "sujos"(Raw Layer) e dados "limpos"(Cleansed Layer).
+- Talvez eu crie uma camada gold (Business Layer)

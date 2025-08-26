@@ -1,0 +1,50 @@
+nome,email,cidade,estado,id_cliente,data_venda,valor_venda,status_pedido
+Ana Souza,ana@email.com,São Paulo,SP,23,2025-08-18,200,concluído
+João Pereira,,Rio de Janeiro,RJ,87,2025-08-17,150,finalizado
+,mariana@email.com,Belo Horizonte,MG,412,2025-08-19,300,pendente
+Carlos da Silva,carlos@@email.com,Curitiba,PR,56,2025-08-15,250,em trânsito
+Lucia Alves,lucia@email.com,São Paulo,,102,2025-08-14,,atrasado
+Pedro Gomes,pedro@email.com,Rio de Janeiro,RJ,78,2025-08-18,180,concluido
+, ,Belo Horizonte,MG,90,2025-08-16,220,Encaminhado
+Maria Dias,maria@email.com,São Paulo,SP,310,2025-08-19,500,FINALIZADO
+Ricardo Lopes,ricardo@email.com,Salvador,BA,7,2025-08-18,,pendente
+Fernanda Rocha,,Fortaleza,CE,18,2025-08-17,300,entregue
+Bruno Martins,bruno@email.com,Recife,PE,45,2025-08-16,450,em trânsito
+Carla Ferreira,carla@email.com,Belo Horizonte,MG,230,2025-08-15,150,atrasado
+Paulo Sousa,paulo@email.com,Rio de Janeiro,RJ,501,2025-08-18,200,finalizado
+Juliana Costa,juliana@email.com,São Paulo,SP,77,2025-08-14,350,pendente
+Felipe Lima,,Porto Alegre,RS,88,2025-08-19,400,concluído
+Tatiana Mendes,tatiana@email.com,Brasília,DF,90,2025-08-18,,em trânsito
+Roberto Silva,roberto@email,Salvador,BA,210,2025-08-17,270,concluido
+Simone Carvalho,simone@email.com,Curitiba,PR,111,2025-08-16,320,encaminhado
+Vitor Rocha,vitor@email.com,São Paulo,SP,13,2025-08-15,180,entregue
+Paula Almeida,paula@email.com,Rio de Janeiro,RJ,42,2025-08-19,,pendente
+Gustavo Santos,gustavo@email.com,Belo Horizonte,MG,67,2025-08-18,250,atrasado
+Renata Moreira,renata@email.com,Fortaleza,CE,25,2025-08-17,330,finalizado
+Marcelo Pinto,marcelo@email.com,Recife,PE,98,2025-08-16,400,em trânsito
+Isabela Fernandes,isabela@email.com,São Paulo,SP,64,2025-08-15,,entregue
+Fernando Ribeiro,fernando@email.com,Porto Alegre,RS,502,2025-08-19,280,concluido
+Gabriela Lima,gabriela@email.com,Rio de Janeiro,RJ,310,2025-08-18,150,pendente
+Rafael Santos,rafael@email.com,Belo Horizonte,MG,45,2025-08-17,350,encaminhado
+Vanessa Souza,vanessa@email.com,São Paulo,SP,23,2025-08-16,200,entregue
+Leonardo Costa,leonardo@email.com,Curitiba,PR,78,2025-08-15,450,atrasado
+Caroline Dias,caroline@email.com,Salvador,BA,12,2025-08-19,320,concluído
+Diego Oliveira,diego@email.com,Rio de Janeiro,RJ,56,2025-08-18,,finalizado
+Aline Martins,aline@email.com,Belo Horizonte,MG,88,2025-08-17,200,pendente
+Bruno Carvalho,bruno@email.com,São Paulo,SP,102,2025-08-16,330,em trânsito
+Patricia Alves,patricia@email.com,Porto Alegre,RS,310,2025-08-15,400,entregue
+Carlos Ferreira,carlos@email.com,Rio de Janeiro,RJ,501,2025-08-19,250,atrasado
+Fernanda Gomes,fernanda@email.com,Fortaleza,CE,42,2025-08-18,180,concluído
+Ricardo Silva,ricardo@email.com,São Paulo,SP,67,2025-08-17,350,finalizado
+Amanda Costa,amanda@email.com,Belo Horizonte,MG,25,2025-08-16,400,pendente
+Rafael Lima,rafael@email.com,Rio de Janeiro,RJ,13,2025-08-15,220,em trânsito
+Juliana Souza,juliana@email.com,São Paulo,SP,90,2025-08-19,300,entregue
+Leonardo Rocha,leonardo@email.com,Curitiba,PR,18,2025-08-18,,atrasado
+Carla Almeida,carla@email.com,Belo Horizonte,MG,210,2025-08-17,450,concluido
+Paulo Santos,paulo@email.com,Salvador,BA,111,2025-08-16,200,encaminhado
+Fernanda Ribeiro,fernanda@email.com,São Paulo,SP,310,2025-08-15,330,entregue
+Marcelo Costa,marcelo@email.com,Rio de Janeiro,RJ,64,2025-08-19,280,atrasado
+Vanessa Lima,vanessa@email.com,Belo Horizonte,MG,502,2025-08-18,150,concluído
+Vitor Souza,vitor@email.com,Curitiba,PR,23,2025-08-17,350,finalizado
+Tatiana Santos,tatiana@email.com,São Paulo,SP,78,2025-08-16,400,pendente
+Diego Lima,diego@email.com,Rio de Janeiro,RJ,310,2025-08-15,220,em trânsito
