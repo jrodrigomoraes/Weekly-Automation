@@ -1,0 +1,178 @@
+id_cliente,nome,id_venda,data_venda,email,estado,status_pedido
+2,Ana Nascimento,767,2025-08-05,da-cruzjoao-pedro@example.com,AC,atrasado
+9,Vinícius Moreira,2429,2025-07-30,da-costalara@example.com,PA,atrasado
+14,Ana Julia Jesus,1530,2025-08-08,emanuellyazevedo@example.com,GO,atrasado
+19,Maria Laura Mendonça,4236,2025-08-01,thalesalves@example.com,PR,atrasado
+24,Danilo Vargas,3377,2025-07-30,rviana@example.net,RR,atrasado
+27,Caio Aragão,4550,2025-07-30,maria-flordias@example.com,SP,atrasado
+38,Dante Rocha,1578,2025-08-02,costacaua@example.net,SP,atrasado
+40,Maria Flor Alves,1171,2025-08-06,machadoana@example.net,PE,atrasado
+49,Maria Alice Ramos,2140,2025-07-31,vmachado@example.com,ES,atrasado
+50,Renan Araújo,2768,2025-08-08,casa-grandeigor@example.net,MT,atrasado
+52,Matheus Câmara,1904,2025-08-07,costajoao@example.org,MG,atrasado
+52,Matheus Câmara,3071,2025-07-31,costajoao@example.org,MG,atrasado
+55,Sr. Caio Costela,957,2025-08-01,beniciomoura@example.com,AP,atrasado
+56,Ana Cecília Silveira,3401,2025-08-03,yuri69@example.org,SP,atrasado
+59,Luigi Novaes,2174,2025-08-01,lmachado@example.org,SE,atrasado
+61,Eloá Cavalcante,172,2025-07-30,fonsecaalexia@example.com,TO,atrasado
+69,Isaac Silva,2798,2025-08-01,ucampos@example.org,AP,atrasado
+70,Sr. João Felipe Lima,3555,2025-08-08,maria-flor43@example.org,RO,atrasado
+73,Arthur Macedo,2,2025-08-05,maria-vitoria16@example.org,PR,atrasado
+87,João Gabriel Borges,1476,2025-07-30,ravybarbosa@example.com,DF,atrasado
+88,Maria Liz Oliveira,3928,2025-08-02,matheus10@example.net,RS,atrasado
+89,Anna Liz da Conceição,4594,2025-08-08,sarah27@example.net,PA,atrasado
+102,Dr. Valentim Lima,127,2025-08-07,gael60@example.org,SE,atrasado
+107,Emanuel Ribeiro,2476,2025-07-31,yuri88@example.net,AL,atrasado
+108,Felipe Freitas,221,2025-08-04,da-matacamila@example.net,DF,atrasado
+109,Enzo Brito,2732,2025-08-04,luiz-fernando72@example.com,SC,atrasado
+109,Enzo Brito,2634,2025-07-31,luiz-fernando72@example.com,SC,atrasado
+111,Aurora Teixeira,4698,2025-08-01,maria-eduarda37@example.net,BA,atrasado
+116,Esther Carvalho,3489,2025-08-04,gsales@example.org,PA,atrasado
+131,Allana Souza,1928,2025-08-04,milena18@example.com,AP,atrasado
+135,Maria Júlia das Neves,848,2025-08-06,marinadas-neves@example.org,RR,atrasado
+135,Maria Júlia das Neves,2115,2025-08-05,marinadas-neves@example.org,RR,atrasado
+137,Vinicius Sampaio,4914,2025-07-31,antonyda-rosa@example.net,PI,atrasado
+147,Mateus Almeida,1045,2025-07-30,rodrigofernandes@example.net,PR,atrasado
+158,Nicolas Lopes,2686,2025-08-08,cmoura@example.org,DF,atrasado
+160,Aurora Gomes,2187,2025-07-31,maria12@example.org,MS,atrasado
+164,Gustavo Henrique Montenegro,3334,2025-08-04,claracarvalho@example.net,PI,atrasado
+175,Ana Vitória Silveira,1323,2025-08-03,vasconcelosvinicius@example.net,PR,atrasado
+183,Matteo Mendes,2504,2025-08-05,mathias66@example.org,PI,atrasado
+187,Ian Peixoto,4827,2025-08-08,mourabernardo@example.org,GO,atrasado
+188,Yago Cavalcanti,1717,2025-08-02,fogacarafaela@example.com,RJ,atrasado
+193,Dra. Eloá Vieira,3623,2025-07-30,qrios@example.com,RN,atrasado
+195,Ayla Moura,4491,2025-08-03,duarteagatha@example.com,CE,atrasado
+202,Sra. Maria Fernanda Rocha,1259,2025-08-02,daniela36@example.com,AM,atrasado
+205,Luna Campos,4663,2025-08-05,fernandacaldeira@example.net,BA,atrasado
+206,Asafe Andrade,1075,2025-07-31,gsilveira@example.com,RO,atrasado
+208,Agatha Freitas,745,2025-08-01,gpereira@example.net,RJ,atrasado
+218,Isabela Freitas,1164,2025-08-04,clariceda-luz@example.net,RJ,atrasado
+218,Isabela Freitas,1150,2025-07-31,clariceda-luz@example.net,RJ,atrasado
+219,Maria Vitória Teixeira,4983,2025-08-03,vicentefernandes@example.org,CE,atrasado
+222,Lorenzo Almeida,488,2025-08-06,freitasbrayan@example.org,RN,atrasado
+238,Noah das Neves,1451,2025-08-04,laisnogueira@example.org,MG,atrasado
+247,Ravy Farias,1120,2025-08-05,igor47@example.com,MS,atrasado
+253,Clara Vargas,1449,2025-08-03,nataliapimenta@example.com,AC,atrasado
+255,Otto Fernandes,2503,2025-08-01,dcosta@example.org,RR,atrasado
+267,Yan Brito,2565,2025-08-06,omoura@example.com,PI,atrasado
+277,Srta. Maria Cecília Fernandes,2538,2025-08-01,azevedoana@example.net,AM,atrasado
+283,Joaquim Moreira,4859,2025-08-07,qaragao@example.net,AP,atrasado
+283,Joaquim Moreira,3609,2025-08-03,qaragao@example.net,AP,atrasado
+286,Lucca Novaes,3467,2025-07-30,maria-lauracostela@example.net,AP,atrasado
+287,Benjamim Carvalho,791,2025-07-31,smacedo@example.net,MS,atrasado
+290,Carlos Eduardo Lima,2516,2025-07-31,vmarques@example.org,MA,atrasado
+293,Bernardo Gonçalves,1874,2025-08-08,vitoriacamara@example.net,ES,atrasado
+297,Esther Mendonça,39,2025-08-01,ayla55@example.org,AM,atrasado
+308,Heitor Fonseca,3440,2025-08-03,maria-flor32@example.com,PB,atrasado
+319,Hellena da Mata,4213,2025-08-03,theodoro42@example.org,RJ,atrasado
+320,Bento Andrade,1679,2025-08-03,ypastor@example.net,AP,atrasado
+323,Natália Vieira,800,2025-08-06,rafaela35@example.org,AL,atrasado
+339,Sra. Luísa Freitas,1428,2025-08-06,rcarvalho@example.org,MG,atrasado
+348,Isabela Borges,1499,2025-08-03,pedro-henrique86@example.net,PR,atrasado
+358,Sra. Sophie Aragão,19,2025-08-04,kpimenta@example.net,PB,atrasado
+368,Dr. Dom Moura,2539,2025-08-04,maria-cecilia79@example.net,MG,atrasado
+369,Dra. Camila Barros,4201,2025-08-06,murilo87@example.com,SE,atrasado
+369,Dra. Camila Barros,3415,2025-08-03,murilo87@example.com,SE,atrasado
+370,Maria Júlia Pires,2952,2025-07-30,rsilva@example.net,PE,atrasado
+376,Sr. Breno Macedo,2462,2025-08-06,camargomatheus@example.net,GO,atrasado
+376,Sr. Breno Macedo,2529,2025-07-31,camargomatheus@example.net,GO,atrasado
+378,Benicio Machado,305,2025-08-06,gomeseloa@example.net,AP,atrasado
+385,Srta. Ana Nogueira,4045,2025-08-06,vianakaique@example.net,MG,atrasado
+391,Marina Fogaça,1891,2025-08-06,ferreiraalexia@example.net,MG,atrasado
+393,Henrique Farias,4366,2025-07-31,matheussilva@example.org,AM,atrasado
+401,Carolina Duarte,1645,2025-08-03,manuelanogueira@example.net,PR,atrasado
+403,Juan Pimenta,3018,2025-07-30,azevedocaio@example.net,AM,atrasado
+406,Paulo Novaes,2026,2025-08-04,eduardoribeiro@example.org,AL,atrasado
+407,Dr. Mateus Fogaça,4128,2025-08-04,ana-sophia90@example.org,PI,atrasado
+407,Dr. Mateus Fogaça,2791,2025-08-03,ana-sophia90@example.org,PI,atrasado
+408,Caio Lima,1550,2025-08-04,rmacedo@example.com,MT,atrasado
+422,Maria Souza,387,2025-08-07,oliveiraana-vitoria@example.com,AP,atrasado
+428,Miguel Albuquerque,364,2025-07-30,nferreira@example.net,PI,atrasado
+430,Emanuel Almeida,2195,2025-07-30,montenegrotheodoro@example.net,MS,atrasado
+431,Sra. Alana Campos,3209,2025-08-07,limagael@example.net,PE,atrasado
+434,Jade Duarte,196,2025-08-08,castromaya@example.org,RS,atrasado
+435,Yasmin da Rocha,906,2025-08-04,pietra54@example.net,PI,atrasado
+437,Lunna Moura,63,2025-08-08,fnovaes@example.org,TO,atrasado
+437,Lunna Moura,489,2025-07-31,fnovaes@example.org,TO,atrasado
+437,Lunna Moura,3562,2025-07-30,fnovaes@example.org,TO,atrasado
+449,Dr. Cauã Castro,1655,2025-08-02,luiz-fernandovieira@example.net,MG,atrasado
+462,Melissa Garcia,4573,2025-08-03,wda-rocha@example.net,AP,atrasado
+476,Marcela Pereira,1357,2025-08-08,costelavitor-gabriel@example.org,ES,atrasado
+476,Marcela Pereira,4866,2025-08-08,costelavitor-gabriel@example.org,ES,atrasado
+477,Apollo Casa Grande,836,2025-08-03,da-pazbeatriz@example.net,SC,atrasado
+480,Josué Moraes,2882,2025-07-30,csales@example.com,MS,atrasado
+488,Dra. Marina Moura,3420,2025-08-03,isabeldias@example.org,DF,atrasado
+495,Sr. Gael Mendes,4642,2025-08-06,da-motarenan@example.net,AC,atrasado
+510,Sr. Apollo da Mata,1397,2025-08-04,nascimentocamila@example.net,MA,atrasado
+512,Dom Aparecida,1827,2025-08-08,ubrito@example.org,AL,atrasado
+513,Rafaela Vieira,2834,2025-08-07,gael21@example.net,PB,atrasado
+518,Srta. Cecilia Gonçalves,1487,2025-08-05,zcostela@example.com,ES,atrasado
+531,Otávio Machado,2638,2025-08-02,isabella07@example.net,ES,atrasado
+533,Isaque Pinto,2150,2025-08-01,gabrielarios@example.net,RJ,atrasado
+536,Isabel Borges,1554,2025-08-01,pedroteixeira@example.com,BA,atrasado
+542,Daniel Ribeiro,2190,2025-08-07,murilonascimento@example.org,PA,atrasado
+559,Vinícius Alves,523,2025-08-04,emanuellacirino@example.org,AM,atrasado
+560,Mathias Aragão,839,2025-08-08,lorenzo79@example.org,RN,atrasado
+572,Vitor Borges,534,2025-08-03,novaesana-cecilia@example.com,MT,atrasado
+573,Luiza Câmara,2613,2025-08-06,nina50@example.org,AM,atrasado
+575,José Pedro Moura,3138,2025-08-01,ysiqueira@example.com,SC,atrasado
+585,Ana Carolina da Cunha,4246,2025-07-31,murilomachado@example.com,MS,atrasado
+587,Aurora Abreu,3715,2025-07-31,salmeida@example.org,SE,atrasado
+589,Ester Novais,2434,2025-08-01,ferreirahenry-gabriel@example.com,AL,atrasado
+590,Sarah Câmara,3419,2025-07-30,luccamartins@example.net,RJ,atrasado
+597,Caio Rios,540,2025-08-07,hadassamelo@example.com,DF,atrasado
+616,Enrico Marques,4912,2025-07-31,cardosostella@example.com,SC,atrasado
+618,João Gabriel Andrade,4424,2025-08-01,portoarthur@example.net,GO,atrasado
+622,Srta. Giovanna Ribeiro,2977,2025-07-31,ribeiromurilo@example.com,AL,atrasado
+630,Clarice Barbosa,492,2025-08-07,gabrielacamara@example.net,PB,atrasado
+643,Cauê Sales,2761,2025-08-01,heloisaalmeida@example.com,MA,atrasado
+647,Dra. Maria Laura Montenegro,646,2025-08-08,da-cunhanina@example.org,ES,atrasado
+649,Cauã Mendes,4212,2025-08-07,fbarbosa@example.com,TO,atrasado
+650,Dra. Maria Luísa da Mota,5000,2025-08-04,pereiraliam@example.org,GO,atrasado
+669,Srta. Isis Ramos,2013,2025-07-31,bella77@example.com,ES,atrasado
+680,Lucas Gabriel Viana,1615,2025-08-01,julia42@example.net,AM,atrasado
+687,Bianca Ferreira,4474,2025-08-03,luiz-felipe05@example.com,DF,atrasado
+694,Maria Vitória Silveira,2103,2025-07-30,gael-henriquepires@example.com,PB,atrasado
+695,Lunna Peixoto,4808,2025-08-07,souzafernando@example.com,SC,atrasado
+698,Srta. Larissa da Mota,4868,2025-07-30,vmacedo@example.net,MG,atrasado
+702,Sr. Kevin Pires,485,2025-08-06,ravilima@example.org,GO,atrasado
+716,Manuela Cassiano,398,2025-08-04,danielmonteiro@example.org,PI,atrasado
+722,Bianca Martins,228,2025-08-07,agathacaldeira@example.com,MA,atrasado
+736,Dra. Luara Leão,2351,2025-08-04,gcassiano@example.net,MS,atrasado
+738,Ísis Montenegro,4727,2025-08-05,valmeida@example.org,DF,atrasado
+742,Pedro Monteiro,1053,2025-08-04,acorreia@example.org,DF,atrasado
+744,Rafael Costa,4775,2025-07-30,brenda61@example.net,ES,atrasado
+754,Gustavo Camargo,809,2025-08-04,vmoraes@example.org,GO,atrasado
+763,Rhavi Porto,4190,2025-08-08,ayllaandrade@example.com,SP,atrasado
+763,Rhavi Porto,4013,2025-08-07,ayllaandrade@example.com,SP,atrasado
+785,Maria Clara Marques,1684,2025-07-30,das-nevesvitor@example.org,AL,atrasado
+790,Dr. Luiz Felipe Santos,3549,2025-07-30,marinanogueira@example.org,BA,atrasado
+793,José Machado,336,2025-08-01,ileao@example.org,CE,atrasado
+799,Maria Vitória Silveira,3937,2025-08-01,cardosodom@example.net,TO,atrasado
+802,Catarina Castro,1573,2025-08-07,luna34@example.com,RN,atrasado
+804,Camila Cassiano,3660,2025-08-02,osouza@example.com,RN,atrasado
+808,Carolina Rodrigues,2626,2025-07-31,nguerra@example.org,MS,atrasado
+810,Liam Cavalcanti,718,2025-08-07,gabriel84@example.net,ES,atrasado
+812,Carolina Rezende,4183,2025-08-05,pfonseca@example.net,RJ,atrasado
+824,Heloísa Novais,3939,2025-07-30,mcavalcante@example.net,RS,atrasado
+830,João Pedro Jesus,3977,2025-08-06,ana-vitoriada-mota@example.org,AM,atrasado
+847,Beatriz Viana,2594,2025-08-08,manuelaguerra@example.org,CE,atrasado
+861,Dante Cavalcante,2633,2025-07-31,apolloleao@example.com,CE,atrasado
+866,Luigi Macedo,460,2025-08-05,yagofreitas@example.org,RO,atrasado
+868,Ana Carolina Machado,1277,2025-08-02,lcassiano@example.net,SE,atrasado
+873,Henrique Moura,2475,2025-08-05,claricecarvalho@example.com,RO,atrasado
+879,Paulo Lima,1839,2025-07-30,eloamonteiro@example.org,RO,atrasado
+884,Mathias Cirino,4505,2025-08-04,hpastor@example.com,MT,atrasado
+885,Sr. Paulo Fernandes,1199,2025-08-08,gmendes@example.net,PA,atrasado
+888,Bernardo Marques,4035,2025-08-04,silvagiovanna@example.org,RR,atrasado
+906,Benjamim Novaes,2953,2025-08-03,wdas-neves@example.net,RO,atrasado
+906,Benjamim Novaes,4972,2025-07-30,wdas-neves@example.net,RO,atrasado
+911,Luana Cavalcante,3920,2025-08-03,maria-juliavasconcelos@example.org,ES,atrasado
+912,João Guilherme da Paz,3418,2025-08-02,limamariana@example.com,BA,atrasado
+912,João Guilherme da Paz,3628,2025-08-02,limamariana@example.com,BA,atrasado
+922,João Felipe Costa,1482,2025-08-04,augustoporto@example.net,SC,atrasado
+936,Helena Nascimento,1616,2025-08-02,ana-cecilia77@example.net,SE,atrasado
+944,Luiz Felipe Araújo,2861,2025-08-06,yda-rosa@example.net,RR,atrasado
+958,Srta. Laís Cirino,3659,2025-08-03,bgarcia@example.com,DF,atrasado
+977,Sr. Miguel Vieira,897,2025-08-07,alanajesus@example.net,SE,atrasado
+984,Davi Luiz da Cruz,4327,2025-08-07,jose92@example.net,AC,atrasado

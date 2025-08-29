@@ -1,40 +1,29 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
-
-import pandas as pd
 import logging
+import pandas as pd
 
+logger = logging.getLogger(__name__)
 
-# In[3]:
-
-
-logger = logging.getLogger(__name__) #Ter um logger com o nome 'transform'
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
-def transform_data(clientes, vendas):
+def transform_data(df: pd.DataFrame):
     logger.info("Iniciando transformação de dados...")
-    
-    #Vamos remover espaço em branco, garantir que é str e capitalizar as iniciais
+
+    # Separar clientes (únicos)
+    clientes = df[['id_cliente_raw', 'nome', 'email', 'cidade', 'estado']].drop_duplicates(subset=['id_cliente_raw'])
+
+    # Separar vendas
+    vendas = df[['id_venda_raw', 'id_cliente_raw', 'data_venda', 'valor_venda', 'status_pedido']]
+
+    # Limpeza clientes
     clientes['nome'] = clientes['nome'].fillna('Nome Desconhecido').astype(str).str.strip().str.title()
-    
-    #Tratando valores ausentes
-    clientes['email'] = clientes['email'].fillna('sem_email@dominio.com') #Adiante vamos tratar melhor com great expectations
-    clientes["estado"] = clientes["estado"].fillna("desconhecido")
-    vendas["status_pedido"] = vendas["status_pedido"].fillna("desconhecido")
-    
-    #Para não distorcer KPI's, criamos uma nova coluna para valores 'desconhecidos' em venda.
-    vendas["venda_incompleta"] = vendas["valor_venda"].isnull()
-    
-    #Validando data
+    clientes['email'] = clientes['email'].fillna('sem_email@dominio.com')
+    clientes['estado'] = clientes['estado'].fillna('desconhecido')
+
+    # Limpeza vendas
+    vendas['status_pedido'] = vendas['status_pedido'].fillna('desconhecido')
+    vendas['venda_incompleta'] = vendas['valor_venda'].isnull()
     vendas['data_venda'] = pd.to_datetime(vendas['data_venda'], errors='coerce')
-    
-    #Criar flag para datas inválidas ou nulas (se fizer sentido para seu negócio)
     vendas['data_venda_invalida'] = vendas['data_venda'].isna()
-    
-    #Validando os valores de status_pedido
+    vendas = vendas[vendas['id_cliente_raw'].notna()]
+
     status_map = {
         "concluído": "entregue",
         "finalizado": "entregue",
@@ -43,16 +32,12 @@ def transform_data(clientes, vendas):
         "encaminhado": "em transporte",
         "atrasado": "atrasado"
     }
-    
-    vendas['status_pedido'] = vendas['status_pedido'].str.strip().str.lower().map(status_map).fillna('desconhecido')
-    
+    vendas['status_pedido'] = (
+        vendas['status_pedido']
+        .astype(str).str.strip().str.lower()
+        .map(status_map)
+        .fillna('desconhecido')
+    )
+
     logger.info("Transformação concluída com sucesso.")
-    
     return clientes, vendas
-
-
-# In[ ]:
-
-
-
-
