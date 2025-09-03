@@ -1,4 +1,4 @@
-def main():
+def generate_pdf_report():
     from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image
     from reportlab.lib.pagesizes import A4
     from reportlab.lib.styles import getSampleStyleSheet
@@ -25,6 +25,3 @@ def main():
 
     doc.build(flow)
     print(f"PDF gerado: {pdf_file}")
-
-if __name__ == "__main__":
-    main()
