@@ -24,7 +24,7 @@ Durante a execução no DAG do Airflow, o seguinte erro foi registrado:
 `AttributeError: type object 'Validator' has no attribute 'from_pandas'`
 
 
-Isso indicava que o contexto do GE estava mal configurado ou incorretamente inicializado — e o objeto `Validator` não tinha o método esperado. Logs adicionais mostravam falhas ao localizar o contexto raiz do projeto e uso de `EphemeralDataContext` sem configuração.
+Isso indicava que o contexto do GE estava mal configurado ou incorretamente inicializado e o objeto `Validator` não tinha o método esperado. Logs adicionais mostravam falhas ao localizar o contexto raiz do projeto e uso de `EphemeralDataContext` sem configuração.
 
 Após diversas tentativas de correção e análise da documentação oficial, concluiu-se que o custo de integração **superava o benefício** imediato no cenário atual.
 
@@ -84,12 +84,13 @@ Essa etapa garante que somente dados consistentes seguem para a próxima camada 
 
 ### Exemplo de log gerado
 
-```bash
+```
 2025-09-09 06:16:45 - INFO - Iniciando validação dos dados...
 2025-09-09 06:16:45 - WARNING - 3 clientes inválidos serão descartados:
 2025-09-09 06:16:45 - WARNING - id_cliente_raw=999, nome='', email='nan'
 2025-09-09 06:16:45 - INFO - 87 clientes válidos salvos em /opt/airflow/temp/clientes_validos.pkl
 2025-09-09 06:16:45 - INFO - 195 vendas válidas salvas em /opt/airflow/temp/vendas_validas.pkl
+```
 
 ---
 

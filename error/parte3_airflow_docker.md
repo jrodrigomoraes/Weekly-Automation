@@ -26,14 +26,14 @@ Além disso, **erros relacionados ao banco de dados iniciando depois dos serviç
 - Cria as tabelas no Postgres (ou backend configurado).
 
 ### Log Relevante
-`DeprecationWarning: The sql_alchemy_conn option in [core] has been moved...`
-Não é um erro, apenas um aviso de depreciação. A configuração sql_alchemy_conn foi movida de [core] para [database] no airflow.cfg. O banco foi inicializado corretamente.
+> `DeprecationWarning: The sql_alchemy_conn option in [core] has been moved...`  
+Não é um erro, apenas um aviso de depreciação. A configuração sql_alchemy_conn foi movida de [core] para [database] no airflow.cfg. O banco foi inicializado corretamente.  
 **Resultado final:** `Initialization done`
 
 ---
 
 ## Subida dos Serviços
-`docker-compose up -d`
+`docker-compose up -d`  
 **O que esse comando faz:**
 - Sobe todos os serviços definidos no docker-compose.yml em background:
 - postgres (banco de metadados)
@@ -43,7 +43,7 @@ Não é um erro, apenas um aviso de depreciação. A configuração sql_alchemy_
 - airflow-worker
 
 ### Log Relevante
-`Found orphan containers...`
+> `Found orphan containers...`  
 Contêineres "órfãos" são serviços que existiam de execuções anteriores e não estão mais referenciados no docker-compose.yml atual. Não é um erro, apenas um aviso.
 Se quiser remover: `docker-compose up -d --remove-orphans`
 

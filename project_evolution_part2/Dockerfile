@@ -1,23 +1,24 @@
-# Usar a imagem oficial do Great Expectations
-FROM greatexpectations/great_expectations:python-3.7-buster-ge-0.12.0
+#Usa imagem oficial do Airflow
+FROM apache/airflow:2.9.2-python3.11
 
-# Instalar o Apache Airflow e outras dependências necessárias
-RUN pip install apache-airflow==2.9.1 \
-    apache-airflow-providers-postgres \
-    psycopg2-binary \
-    pandas \
-    matplotlib \
-    seaborn \
-    python-dotenv \
-    requests \
-    reportlab
+#Muda para root para instalar pacotes de sistema
+USER root
 
-# Configurações do Airflow (caso necessário)
-ENV AIRFLOW_HOME=/opt/airflow
-ENV PYTHONPATH=$PYTHONPATH:/opt/airflow
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
+    gcc \
+    libgirepository1.0-dev \
+    libcairo2-dev \
+    pkg-config \
+    python3-dev \
+    && rm -rf /var/lib/apt/lists/*
 
-# Definir o diretório de trabalho
-WORKDIR /opt/airflow
+#Volta para o usuário airflow
+USER airflow
 
-# Iniciar o shell interativo ou a execução do Airflow por padrão
-CMD ["bash"]
+#Copia requirements.txt e instala dependências Python
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY .env /opt/airflow/.env

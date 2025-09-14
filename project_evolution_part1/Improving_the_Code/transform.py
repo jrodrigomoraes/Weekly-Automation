@@ -7,10 +7,10 @@ def transform_data(df: pd.DataFrame):
     logger.info("Iniciando transformação de dados...")
 
     # Separar clientes (únicos)
-    clientes = df[['id_cliente_raw', 'nome', 'email', 'cidade', 'estado']].drop_duplicates(subset=['id_cliente_raw'])
+    clientes = df[['id_cliente_raw', 'nome', 'email', 'cidade', 'estado']].drop_duplicates(subset=['id_cliente_raw']).copy()
 
     # Separar vendas
-    vendas = df[['id_venda_raw', 'id_cliente_raw', 'data_venda', 'valor_venda', 'status_pedido']]
+    vendas = df[['id_venda_raw', 'id_cliente_raw', 'data_venda', 'valor_venda', 'status_pedido']].copy()
 
     # Limpeza clientes
     clientes['nome'] = clientes['nome'].fillna('Nome Desconhecido').astype(str).str.strip().str.title()
@@ -40,4 +40,6 @@ def transform_data(df: pd.DataFrame):
     )
 
     logger.info("Transformação concluída com sucesso.")
+
+    # Retorna os DataFrames transformados
     return clientes, vendas

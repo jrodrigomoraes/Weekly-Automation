@@ -1,10 +1,9 @@
-apache-airflow==2.9.1
-apache-airflow-providers-postgres
-psycopg2-binary
 pandas
+psycopg2-binary
 matplotlib
 seaborn
 python-dotenv
 requests
 reportlab
-great_expectations
+great_expectations>=0.17.20
+pydantic<2

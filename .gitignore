@@ -1,13 +1,13 @@
-# Arquivo de variáveis de ambiente
-.env
+# Arquivo de variáveis de ambiente (em qualquer profundidade)
+**/.env
 
 # Arquivos e pastas de notebooks temporários
 *.ipynb
 .ipynb_checkpoints/
 
 # Ambiente virtual
-venv/
-.env/
+**/venv/
+**/.env
 
 # Scripts BAT (Windows)
 *.bat

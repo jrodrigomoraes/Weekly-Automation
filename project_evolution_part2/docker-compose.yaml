@@ -1,63 +1,107 @@
-version: "3.8"
-
-x-airflow-common:
-  &airflow-common
-  image: apache/airflow:2.9.1-python3.9
-  environment:
-    &airflow-common-env
-    AIRFLOW__CORE__EXECUTOR: LocalExecutor
-    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "true"
-    AIRFLOW__CORE__LOAD_EXAMPLES: "false"
-    AIRFLOW__CORE__FERNET_KEY: ""
-    AIRFLOW__CORE__DAGS_FOLDER: /opt/airflow/dags
-    AIRFLOW__CORE__PLUGINS_FOLDER: /opt/airflow/plugins
-    AIRFLOW__CORE__PIP_ADDITIONAL_REQUIREMENTS: /requirements.txt
-    AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow  # Aqui está a URL do banco de dados
-  volumes:
-    - ./dags:/opt/airflow/dags
-    - ./plugins:/opt/airflow/plugins
-    - ./logs:/opt/airflow/logs
-    - ../project_evolution_part1:/opt/airflow/project_evolution_part1
-  user: "${AIRFLOW_UID:-50000}:0"
-  depends_on:
-    - postgres
-
 services:
+  airflow-webserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: webserver
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:neutron123@postgres/airflow
+      AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:neutron123@postgres/airflow
+      AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
+      AIRFLOW_UID: 50000
+      AIRFLOW_GID: 0
+      SMTP_HOST: smtp.gmail.com
+      SMTP_STARTTLS: 'True'
+      SMTP_SSL: 'False'
+      SMTP_USER: rodz.testeteste2@gmail.com
+      SMTP_PASSWORD: agftwczcBxqiOwrx
+      SMTP_PORT: 587
+      SMTP_MAIL_FROM: rodz.testeteste2@gmail.com
+    ports:
+      - 8080:8080
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./.env:/opt/airflow/.env
+    restart: always
+
+  airflow-scheduler:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: scheduler
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:neutron123@postgres/airflow
+      AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:neutron123@postgres/airflow
+      AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
+      AIRFLOW_UID: 50000
+      AIRFLOW_GID: 0
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./.env:/opt/airflow/.env
+    restart: always
+
+  airflow-worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: celery worker
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      AIRFLOW__CORE__EXECUTOR: CeleryExecutor
+      AIRFLOW__CORE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:neutron123@postgres/airflow
+      AIRFLOW__CELERY__RESULT_BACKEND: db+postgresql://airflow:neutron123@postgres/airflow
+      AIRFLOW__CELERY__BROKER_URL: redis://redis:6379/0
+      AIRFLOW_UID: 50000
+      AIRFLOW_GID: 0
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./.env:/opt/airflow/.env
+      - ./csv:/opt/airflow/csv
+    restart: always
+
   postgres:
     image: postgres:13
     environment:
       POSTGRES_USER: airflow
-      POSTGRES_PASSWORD: airflow
+      POSTGRES_PASSWORD: neutron123
       POSTGRES_DB: airflow
     volumes:
       - postgres-db-volume:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U airflow"]
+      interval: 10s
+      retries: 5
 
-  airflow-webserver:
-    <<: *airflow-common
-    command: webserver
+  redis:
+    image: redis:latest
     ports:
-      - "8080:8080"
-    environment:
-      <<: *airflow-common-env
-
-  airflow-scheduler:
-    <<: *airflow-common
-    command: scheduler
-    environment:
-      <<: *airflow-common-env
-
-  airflow-init:
-    <<: *airflow-common
-    volumes:
-      - ./requirements.txt:/requirements.txt
-      - ./dags:/opt/airflow/dags
-      - ./plugins:/opt/airflow/plugins
-      - ./logs:/opt/airflow/logs
-      - ../project_evolution_part1:/opt/airflow/project_evolution_part1
-    command: >
-      bash -c "pip install -r /requirements.txt &&
-      airflow db upgrade &&
-      airflow users create --username admin --password admin --firstname Rodrigo --lastname Moraes --role Admin --email admin@example.com"
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      retries: 5
 
 volumes:
   postgres-db-volume:
