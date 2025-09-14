@@ -108,10 +108,11 @@ A lógica foi reescrita com o seguinte fluxo:
 
 **Erro Corrigido: Comparação entre TEXT e INTEGER (PostgreSQL)**  
 Problema: Ao executar a DAG com o novo campo id_venda_raw, o PostgreSQL retornou o erro:  
-> `operator does not exist: text = integer`  
+> `operator does not exist: text = integer`
+ 
 Isso ocorre porque o banco espera comparar dois valores do mesmo tipo (TEXT = TEXT), mas o valor passado era int.
 
-**Solução:** No load.py, foi feito cast explícito: `id_venda_raw = str(row.get('id_venda_raw')).strip()`
+**Solução:** No load.py, foi feito cast explícito: `id_venda_raw = str(row.get('id_venda_raw')).strip()`  
 Assim, garantimos que a query SQL seja executada corretamente.
 
 ### Resumo de Boas Práticas e Impactos
